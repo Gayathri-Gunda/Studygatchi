@@ -86,6 +86,19 @@
     min-width: 72px;
 }
 
+/* Keeps the outline for the next/previous buttons while hovered, but only if the button can actually be used. */
+.goober-page-button:not(:disabled):hover {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Where there's no next/previous page available, the button gets no outline and looks faded so that it's clearly not clickable. */
+.goober-page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    outline: none;
+}
+
 .goober-page-indicator {
     font-size: 14px;
     font-weight: 600;
